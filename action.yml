@@ -1,0 +1,9 @@
+name: "GitHub Action for Perl's Dist::Zilla"
+description: 'Run Dist-Zilla on your repository codebase'
+author: jonasbn
+branding:
+  color: red
+  icon: zap
+runs:
+  using: docker
+  image: Dockerfile

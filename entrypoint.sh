@@ -4,7 +4,7 @@ echo ""
 echo "Using dzil for CI test"
 echo "------------------------"
 
-dzil test --all
+dzil installdeps && dzil test --all
 
 EXITCODE=$?
 

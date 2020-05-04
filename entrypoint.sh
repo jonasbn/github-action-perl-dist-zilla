@@ -2,12 +2,12 @@
 
 echo ""
 echo "Using dzil for CI test"
-echo "------------------------"
+echo "----------------------"
 
-dzil listdeps | cpanm && dzil test --all
+dzil $@
 
 EXITCODE=$?
 
-test $EXITCODE -eq 0 || echo "($EXITCODE) Test failed, check logs";
+test $EXITCODE -eq 0 || echo "($EXITCODE) dzil failed, check logs";
 
 exit $EXITCODE

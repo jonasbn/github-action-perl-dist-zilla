@@ -1,5 +1,10 @@
 name: "GitHub Action for Perl's Dist::Zilla"
 description: 'Run Dist-Zilla on your repository codebase'
+inputs:
+  dzil-command:  # id of input
+    description: 'dzil command'
+    required: true
+    default: 'dzil help'
 author: jonasbn
 branding:
   color: red
@@ -7,3 +12,5 @@ branding:
 runs:
   using: docker
   image: Dockerfile
+  args:
+    - ${{ inputs.dzil-command }}

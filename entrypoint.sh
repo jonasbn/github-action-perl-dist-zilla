@@ -3,8 +3,10 @@
 echo ""
 echo "Using dzil for CI test"
 echo "----------------------"
+echo "$@"
+echo "----------------------"
 
-dzil $@
+$@
 
 EXITCODE=$?
 

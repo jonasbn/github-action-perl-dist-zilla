@@ -3,13 +3,15 @@
 echo ""
 echo "Installing dependencies specified in cpanfile"
 echo ""
+
+cpanm --installdeps .
+
+echo ""
 echo "Executing dzil with the following arguments: "
 echo "---------------------------------------------"
 echo "$@"
 echo "---------------------------------------------"
 echo ""
-
-cpanm --installdeps .
 
 $@
 

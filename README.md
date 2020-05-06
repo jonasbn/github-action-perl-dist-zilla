@@ -38,7 +38,7 @@ jobs:
 - [dzil.org](http://dzil.org/)
 - [MetaCPAN: Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
 - [GitHub: Ebirah](https://github.com/jonasbn/ebirah)
-- [DockerHub: Ebirah][https://hub.docker.com/repository/docker/jonasbn/ebirah]
+- [DockerHub: Ebirah](https://hub.docker.com/repository/docker/jonasbn/ebirah)
 
 ## License
 

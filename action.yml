@@ -1,16 +1,12 @@
 name: "GitHub Action for Perl's Dist::Zilla"
-description: 'Run Dist-Zilla on your repository codebase'
-inputs:
-  dzil-command:  # id of input
-    description: 'dzil command'
-    required: true
-    default: 'dzil help'
+description: 'Use Dist-Zilla on your repository codebase'
 author: jonasbn
 branding:
   color: red
   icon: zap
 runs:
   using: docker
-  image: Dockerfile
+  image: 'docker://jonasbn/ebirah:0.4.0'
   args:
-    - ${{ inputs.dzil-command }}
+    - cpanm --installdeps .
+    - dzil test --all

@@ -8,5 +8,4 @@ runs:
   using: docker
   image: 'docker://jonasbn/ebirah:0.4.0'
   args:
-    - dzil listdeps | cpanm
-    - dzil test --all
+    - listdeps | cpanm

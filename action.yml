@@ -6,6 +6,6 @@ branding:
   icon: zap
 runs:
   using: docker
-  image: 'docker://jonasbn/ebirah:0.4.0'
+  image: 'Dockerfile'
   args:
-    - listdeps | cpanm
+    - test --all

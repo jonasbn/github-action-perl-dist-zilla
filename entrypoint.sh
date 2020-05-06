@@ -6,6 +6,8 @@ echo "----------------------"
 echo "$@"
 echo "----------------------"
 
+cpanm installdeps .
+
 $@
 
 EXITCODE=$?

@@ -6,7 +6,7 @@ echo "----------------------"
 echo "$@"
 echo "----------------------"
 
-cpanm installdeps .
+cpanm --installdeps .
 
 $@
 

@@ -2,7 +2,7 @@
 
 ## 0.2.0 2020-12-13 Maintenance release, update not required
 
-- Bumped Ebirah requirement up to 0.6.0 from 0.4.0
+- Bumped Ebirah requirement from 0.4.0 to 0.6.0
 - Please see [Ebirah](https://github.com/jonasbn/ebirah) change log for details
 
 ## 0.1.0 2020-05-06 Feature release

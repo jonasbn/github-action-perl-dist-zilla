@@ -28,7 +28,7 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v2
       - name: "Installing dependencies and testing all using dzil"
-        uses: jonasbn/github-action-perl-dist-zilla@master
+        uses: jonasbn/github-action-perl-dist-zilla@0.2.0
         with:
           dzil-arguments: 'test --all'
 ```

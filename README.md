@@ -25,9 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     name: "dzil run"
     steps:
-      - name: "Checkout repository"
-        uses: actions/checkout@v2
-      - name: "Installing dependencies and testing all using dzil"
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Installing dependencies and testing all using dzil
         uses: jonasbn/github-action-perl-dist-zilla@0.2.0
         with:
           dzil-arguments: 'test --all'

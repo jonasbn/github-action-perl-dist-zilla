@@ -1,22 +1,41 @@
-#!/bin/sh -l
+#!/bin/bash
 
-echo ""
-echo "Installing dependencies specified in cpanfile"
-echo ""
+set -eo pipefail
 
-cpanm --installdeps .
+# to allow the optional minimum configuration of the CPAN client, as required
+# by some distributions
+if [ "${CPAN_CLIENT}" == 'true' ]
+then
+    echo -e '\nCreating minimal CPAN client configuration\n'
+    echo | cpan
+fi
 
-echo ""
-echo "Executing dzil with the following arguments: "
-echo "---------------------------------------------"
+echo -e '\nInstalling dependencies...\n'
+
+if [ -e ./cpanfile ]
+then
+    cpanm --installdeps .
+else
+    dzil authordeps --missing | cpanm --notest
+    dzil listdeps --missing | cpanm --notest
+fi
+
+set -u
+
+LINE='---------------------------------------------'
+
+echo -e '\nExecuting dzil with the following arguments:\n'
+echo $LINE
 echo "$@"
-echo "---------------------------------------------"
-echo ""
+echo -e "${LINE}\n"
 
-$@
+set +e
+
+dzil $@
 
 EXITCODE=$?
 
 test $EXITCODE -eq 0 || echo "($EXITCODE) dzil failed, check logs";
 
 exit $EXITCODE
+

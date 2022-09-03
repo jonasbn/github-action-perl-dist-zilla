@@ -10,3 +10,6 @@ MetaCPAN
 Zilla
 yaml
 Zilla's
+eco
+glasswalk
+CPAN

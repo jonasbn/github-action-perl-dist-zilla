@@ -31,6 +31,7 @@ echo -e "${LINE}\n"
 
 set +e
 
+# shellcheck disable=SC2068
 dzil $@
 
 EXITCODE=$?

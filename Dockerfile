@@ -1,4 +1,4 @@
-FROM jonasbn/ebirah:0.6.0
+FROM jonasbn/ebirah:0.7.0
 
 WORKDIR /opt
 COPY entrypoint.sh /entrypoint.sh

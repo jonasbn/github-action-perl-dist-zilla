@@ -60,6 +60,12 @@ Will be emitted.
 
 Make sure you are testing in a directory containing a `dist.ini`, which is a [Dist::Zilla][dzil.org] configuration file.
 
+## Acknowledgements
+
+- Ricardo Signes ([@rjbs](https://github.com/rjbs)) author of [Dist::Zilla]([dzil.org])
+- Alceu Rodrigues de Freitas Junior ([@glasswalk3r](https://github.com/glasswalk3r)) contributor to this repository
+- All of the Dist::Zilla plugin authors and Dist::Zilla contributors
+
 ## Resources and References
 
 1. [dzil.org]

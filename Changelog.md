@@ -1,5 +1,9 @@
 # Change log for GitHub Action Perl Dist::Zilla
 
+## 0.4.0 2022-10-03 Maintenance release, update recommended
+
+- Bumped [Ebirah](https://github.com/jonasbn/ebirah) requirement from version 0.7.0 to 0.8.0. Which had the core component Dist::Zilla updated from version `6.017` to `6.025`. Please see change log for [Ebirah](https://github.com/jonasbn/ebirah).
+
 ## 0.3.0 2022-09-03 Feature release, update not required
 
 - Bumped [Ebirah](https://github.com/jonasbn/ebirah) requirement from version 0.6.0 to 0.7.0. Please see [Ebirah](https://github.com/jonasbn/ebirah) change log for details

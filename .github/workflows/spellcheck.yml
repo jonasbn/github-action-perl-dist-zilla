@@ -9,4 +9,4 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Checking spelling using pyspelling
-        uses: rojopolis/spellcheck-github-actions@0.28.0
+        uses: rojopolis/spellcheck-github-actions@0.29.0

@@ -1,7 +1,16 @@
-FROM jonasbn/ebirah:0.8.0
+FROM jonasbn/ebirah
+
+ARG NOW
 
 WORKDIR /opt
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+LABEL org.opencontainers.image.base.name="registry.hub.docker.com/jonasbn/ebirah"
+LABEL org.opencontainers.image.url="https://github.com/jonasbn/github-action-perl-dist-zilla"
+LABEL org.opencontainers.image.source="https://github.com/jonasbn/github-action-perl-dist-zilla"
+LABEL org.opencontainers.image.authors="https://jonasbn.github.io/"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.created="$NOW"
 
 ENTRYPOINT ["/entrypoint.sh"]

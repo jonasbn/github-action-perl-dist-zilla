@@ -1,5 +1,5 @@
-now=$(shell date --iso-8601=ns)
+now=$(shell date +"%Y-%m-%dT%H:%M:%S.%N%z")
 
 image:
-	docker buildx build --tag github-action-perl-dist-zilla --build-arg "NOW=${now}" .
+	docker buildx build --no-cache --tag jonasbn/github-action-perl-dist-zilla:latest --build-arg "NOW=${now}" .
 

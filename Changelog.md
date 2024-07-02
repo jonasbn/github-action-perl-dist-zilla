@@ -1,5 +1,9 @@
 # Change log for GitHub Action Perl Dist::Zilla
 
+## 0.5.3 2024-07-02 Maintenance release, update recommended
+
+- Attempting to correct a second bug (second attempt) by changing to `/tmp/` as build directory.
+
 ## 0.5.2 2024-07-02 Maintenance release, update recommended
 
 - Attempting to correct a second bug (we got past the first one):

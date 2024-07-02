@@ -48,7 +48,11 @@ set -u
 
 LINE='---------------------------------------------'
 
-echo -e '\nExecuting dzil with the following arguments:\n'
+mkdir .build
+
+chown -R runner:runner .build/
+
+echo -e '\nExecuting dzil with the following arguments in ${pwd}:\n'
 echo $LINE
 echo "$@"
 echo -e "${LINE}\n"

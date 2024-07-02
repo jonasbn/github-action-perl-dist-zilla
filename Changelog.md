@@ -1,5 +1,13 @@
 # Change log for GitHub Action Perl Dist::Zilla
 
+## 0.5.1 2024-07-02 Maintenance release, update recommended
+
+- Attempt a correcting bug:
+
+  `Can't write to cpanm home '/github/home/.cpanm': You should fix it with chown/chmod first.`
+
+  Observed in: [jonasbn/perl-date-holidays/](https://github.com/jonasbn/perl-date-holidays/)
+
 ## 0.5.0 2024-06-30 Maintenance release, update recommended
 
 - Bumped [Ebirah](https://github.com/jonasbn/ebirah) requirement from version 0.8.0 to 0.9.0. Which had the core component Dist::Zilla updated from version `6.025` to `6.032`. Please see change log for [Ebirah](https://github.com/jonasbn/ebirah).

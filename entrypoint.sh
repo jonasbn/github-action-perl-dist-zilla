@@ -12,14 +12,17 @@ PERL_LOCAL_LIB_ROOT="/home/runner/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_
 export PERL_LOCAL_LIB_ROOT
 # shellcheck disable=SC2089
 PERL_MB_OPT="--install_base \"/home/runner/perl5\"";
+PERL_CPANM_HOME="/home/runner/perl5"
 # shellcheck disable=SC2090
-export PERL_MB_OPT
+export PERL_MB_OPT PERL_CPANM_HOME
 PERL_MM_OPT="INSTALL_BASE=/home/runner/perl5"
 export PERL_MM_OPT
 
+env | sort
+
 echo -e "\nWorking in $(pwd)\n"
 
-ls -la
+ls -la 
 
 # to allow the optional minimum configuration of the CPAN client, as required
 # by some distributions
@@ -38,6 +41,8 @@ else
     dzil authordeps --missing | cpanm --notest
     dzil listdeps --missing | cpanm --notest
 fi
+
+ls -la $PERL_CPANM_HOME/lib/perl5
 
 set -u
 

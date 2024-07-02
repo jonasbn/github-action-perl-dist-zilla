@@ -1,5 +1,23 @@
 # Change log for GitHub Action Perl Dist::Zilla
 
+## 0.5.2 2024-07-02 Maintenance release, update recommended
+
+- Attempting to correct a second bug (we got past the first one):
+
+  `mkpath failed for .build: Permission denied at /home/runner/perl5/lib/perl5/Dist/Zilla/Dist/Builder.pm line 668.`
+
+  When running the following command (default):
+
+  ```bash
+  dzil test
+  ```
+
+  The test step requires a build directory, which is created by the `dzil build` command, but the `dzil test`.
+
+  Observed in: [jonasbn/perl-date-holidays/](https://github.com/jonasbn/perl-date-holidays/)
+
+  Have added `--verbose` to `dzil` to get some more informetion on the issue.
+
 ## 0.5.1 2024-07-02 Maintenance release, update recommended
 
 - Attempt a correcting bug:

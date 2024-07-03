@@ -48,11 +48,10 @@ set -u
 
 LINE='---------------------------------------------'
 
-mkdir .build
+whoami
+id -nG
 
-chown -R runner:runner .build/
-
-echo -e '\nExecuting dzil with the following arguments in ${pwd}:\n'
+echo -e "\nExecuting dzil with the following arguments in: >$(pwd)<:\n"
 echo $LINE
 echo "$@"
 echo -e "${LINE}\n"
@@ -60,10 +59,10 @@ echo -e "${LINE}\n"
 set +e
 
 # shellcheck disable=SC2068
-dzil --verbose $@
+dzil $@
 
 EXITCODE=$?
 
-test $EXITCODE -eq 0 || echo "($EXITCODE) dzil failed, check logs";
+test $EXITCODE -eq 0 || echo "($EXITCODE) dzil failed, check the logs";
 
 exit $EXITCODE

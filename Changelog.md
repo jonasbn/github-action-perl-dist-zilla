@@ -30,7 +30,7 @@
 
   Observed in: [jonasbn/perl-date-holidays/](https://github.com/jonasbn/perl-date-holidays/)
 
-  Have added `--verbose` to `dzil` to get some more informetion on the issue.
+  Have added `--verbose` to `dzil` to get some more information on the issue.
 
 ## 0.5.1 2024-07-02 Maintenance release, update recommended
 

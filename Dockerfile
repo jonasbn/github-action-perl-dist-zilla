@@ -15,6 +15,6 @@ LABEL org.opencontainers.image.licenses="MIT"
 LABEL org.opencontainers.image.created="$NOW"
 
 WORKDIR /tmp
-USER runner
+#USER runner
 
 ENTRYPOINT ["/opt/entrypoint.sh"]

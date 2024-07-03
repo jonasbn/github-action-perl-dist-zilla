@@ -18,12 +18,6 @@ export PERL_MB_OPT PERL_CPANM_HOME
 PERL_MM_OPT="INSTALL_BASE=/home/runner/perl5"
 export PERL_MM_OPT
 
-env | sort
-
-echo -e "\nWorking in $(pwd)\n"
-
-ls -la 
-
 # to allow the optional minimum configuration of the CPAN client, as required
 # by some distributions
 if [ "${CPAN_CLIENT}" == 'true' ]
@@ -47,9 +41,6 @@ ls -la $PERL_CPANM_HOME/lib/perl5
 set -u
 
 LINE='---------------------------------------------'
-
-whoami
-id -nG
 
 echo -e "\nExecuting dzil with the following arguments in: >$(pwd)<:\n"
 echo $LINE

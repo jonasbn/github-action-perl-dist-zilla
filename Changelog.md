@@ -1,5 +1,15 @@
 # Change log for GitHub Action Perl Dist::Zilla
 
+## 0.5.5 2024-07-03 Maintenance release, update recommended
+
+- Removing `USER` directive from Dockerfile, since it is not supported by GitHub Actions.
+
+  REF: [docs.github.com](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners#file-systems)]
+
+## 0.5.4 2024-07-03 Maintenance release, update recommended
+
+- Added more debug information to the output, to help diagnose the issue with the build directory.
+
 ## 0.5.3 2024-07-02 Maintenance release, update recommended
 
 - Attempting to correct a second bug (second attempt) by changing to `/tmp/` as build directory.

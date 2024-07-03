@@ -14,6 +14,8 @@ Currently the implementation can be used for continuous integration (CI), more i
 
 **Required** the arguments to the `dzil` command. Default `help`, which displays a help message
 
+`dzil` has a `--verbose` option, which can be used to get more information on the execution of the command.
+
 ## Example usage
 
 ```yaml

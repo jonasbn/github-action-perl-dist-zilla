@@ -30,7 +30,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Installing dependencies and testing all using dzil
-        uses: jonasbn/github-action-perl-dist-zilla@0.5.0
+        uses: jonasbn/github-action-perl-dist-zilla@0.5.5
         with:
           dzil-arguments: 'test --all'
 ```

@@ -26,14 +26,32 @@ then
     echo | cpan
 fi
 
+# inspect dist.ini for the line: [Prereqs::FromCPANfile]
+# set a variable to indicate the presence of the plugin
+if grep -q '\[Prereqs::FromCPANfile\]' ./dist.ini
+then
+    echo -e '\nPrereqs::FromCPANfile plugin detected\n'
+    export PREREQS_FROM_CPANFILE='true'
+fi
+
 echo -e '\nInstalling dependencies...\n'
 
-if [ -e ./cpanfile ]
+if [ -e ./dist.ini ] && [ -e ./cpanfile ] && [ "${PREREQS_FROM_CPANFILE}" == 'true' ]
 then
-    cpanm --installdeps .
-else
+    echo -e '\nInstalling dependencies using dzil and cpanfile:\n'
     dzil authordeps --missing | cpanm --notest
     dzil listdeps --missing | cpanm --notest
+
+elif [ -e ./dist.ini ]
+then
+    echo -e '\nInstalling dependencies using dzil:\n'
+    dzil authordeps --missing | cpanm --notest
+    dzil listdeps --missing | cpanm --notest
+
+else
+    echo -e '\nInstalling dependencies from cpanfile:\n'
+    cpanm --installdeps .
+
 fi
 
 ls -la $PERL_CPANM_HOME/lib/perl5

@@ -14,6 +14,5 @@ matrix:
       - code
       - pre
   sources:
-  - '**/*.md'
-  - '!CLAUDE.md'
+  - '**/*.md|!CLAUDE.md'
   default_encoding: utf-8

@@ -51,5 +51,5 @@ When adding new technical terms or proper nouns to Markdown files, add them to `
 
 - **Action pins**: Workflow steps reference actions by SHA commit hash (e.g., `actions/checkout@df4cb1c...`), not just a tag. Follow this pattern when adding or updating workflow steps.
 - **Versioning**: Releases follow semver and are documented in `Changelog.md`. The action is referenced by consumers as `jonasbn/github-action-perl-dist-zilla@<version>`.
-- **No `USER` directive in Dockerfile**: GitHub Actions does not support the Docker `USER` directive — running as a non-root user inside the container breaks the GitHub Actions runner. Do not add a `USER` instruction back to the Dockerfile.
+- **Dockerfile `USER`**: `Dockerfile` currently sets `USER root`. Avoid switching to a non-root user unless you also adjust filesystem permissions for GitHub Actions' mounted workspace.
 - **Ebirah upgrades**: Upgrading the base image means changing the `FROM` line in `Dockerfile` and documenting the Ebirah version and resulting Dist::Zilla version in `Changelog.md`.

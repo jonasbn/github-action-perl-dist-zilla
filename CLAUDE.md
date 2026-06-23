@@ -33,10 +33,10 @@ This runs `docker buildx build --no-cache` with a `NOW` build-arg timestamp for 
 **Test the Docker image locally against a Perl project:**
 
 ```bash
-docker run --rm -v $PWD:/opt jonasbn/github-action-perl-dist-zilla help
+docker run --rm -v $PWD:/tmp jonasbn/github-action-perl-dist-zilla help
 ```
 
-Replace `help` with any `dzil` subcommand (e.g., `test --all`). Mount the Perl project directory to `/opt`.
+Replace `help` with any `dzil` subcommand (e.g., `test --all`). Mount the Perl project directory to `/tmp`.
 
 ## CI / Linting
 

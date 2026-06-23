@@ -17,7 +17,7 @@ The three core files and how they interact:
 - **`entrypoint.sh`** — The runtime logic. Sets up `local::lib` paths for the `runner` user, then:
   1. Optionally initializes the CPAN client if `CPAN_CLIENT=true` is set.
   2. Detects `[Prereqs::FromCPANfile]` in `dist.ini` and sets `PREREQS_FROM_CPANFILE=true`.
-  3. Installs dependencies via one of three paths based on what config files exist (`dist.ini` + `cpanfile` with the plugin, `dist.ini` alone, or just `cpanfile`).
+  3. Installs dependencies via one of two paths based on what config files exist (`dist.ini` + `cpanfile` with the plugin, or `dist.ini` alone). Note: the script currently expects `dist.ini` to exist because it greps it for `[Prereqs::FromCPANfile]`.
   4. Runs `dzil $@` with the forwarded arguments, propagating the exit code.
 
 ## Common Commands

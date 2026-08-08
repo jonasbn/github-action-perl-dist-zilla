@@ -1,4 +1,4 @@
-FROM jonasbn/ebirah:0.11.0
+FROM jonasbn/ebirah:0.13.0
 
 ARG NOW
 

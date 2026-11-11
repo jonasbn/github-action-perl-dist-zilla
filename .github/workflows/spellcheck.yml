@@ -1,6 +1,9 @@
 name: Spellcheck Action
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Spellcheck
@@ -8,5 +11,7 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - name: Checking spelling using pyspelling
         uses: rojopolis/spellcheck-github-actions@dad57fc333130f4c9ae9632a6ad7ddc4de3515a2 # 0.69.0
